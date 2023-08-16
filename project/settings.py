@@ -28,8 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
 
+# Application definition
 INSTALLED_APPS = [
     "app",
     "daphne",
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
 ]
 
 MIDDLEWARE = [

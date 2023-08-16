@@ -46,17 +46,8 @@
         };
 
 
-
-
         const boxName = JSON.parse(document.getElementById('box-name').textContent);
-
-        const chatSocket = new WebSocket(
-            'ws://' +
-            window.location.host +
-            '/ws/chat/' +
-            boxName +
-            '/'
-        );
+        const chatSocket = new WebSocket('ws://' +window.location.host +'/ws/chat/' +boxName +'/');
 
         chatSocket.onmessage = function (e) {
             const data = JSON.parse(e.data);
