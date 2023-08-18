@@ -48,11 +48,12 @@
 
         const boxName = JSON.parse(document.getElementById('box-name').textContent);
         const chatSocket = new WebSocket('ws://' +window.location.host +'/ws/chat/' +boxName +'/');
+        console.log(chatSocket)
 
         chatSocket.onmessage = function (e) {
             const data = JSON.parse(e.data);
             console.log(data)
-            document.querySelector('#chat-text').value += (data.message + ' sent by ' + data.username   + '\n') 
+            document.querySelector('#chat-text').value += ( data.username + ' : ' + data.message   + '\n') 
         }
     </script>
 
