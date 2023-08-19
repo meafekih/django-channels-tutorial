@@ -1,3 +1,4 @@
+# Correct usage in a Django model
 from django.db import models
 from django.contrib.auth.models import User
 
